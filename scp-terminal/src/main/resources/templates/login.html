@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FOUNDATION DATABASE ACCESS</title>
+    <link rel="stylesheet" href="/css/autoscroll.css">
+</head>
+<body class="login-body">
+
+<div class="login-container">
+<pre class="scp-header">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠈⠀⠁⠈⠀⠉⢹⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣤⠶⠛⠀⠀⠀⠀⠀⠀⠀⠘⠳⠶⣄⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣴⠛⠁⠀⠀⠀⠀⠀⣿⣧⠀⠀⠀⠀⠀⠈⠛⣦⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡞⠋⠀⠀⢀⣤⣶⠿⠟⣿⡟⠻⠷⣦⣄⠀⠀⠀⠙⢷⡀⠀⠀⠀
+⠀⠀⢀⡟⠀⠀⠀⣰⡿⠋⠀⠀⠀⣿⡇⠀⠀⠈⠙⣷⣄⠀⠀⠈⢿⡀⠀⠀
+⠀⠀⣾⠀⠀⠀⣼⡏⠀⠀⠀⠀⠘⣿⡿⠃⠀⠀⠀⠈⢿⣇⠀⠀⠈⣧⠀⠀
+⠀⢰⣿⠀⠀⠀⣿⠃⠀⠀⠀⠀⠀⠘⠁⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⣿⠀⠀
+⠀⢸⡷⠀⠀⠀⣿⡆⠀⢀⣶⣷⡖⠀⠀⢶⣶⣆⡀⠀⢸⣿⠀⠀⠀⣿⡀⠀
+⣴⠋⠀⠀⠀⢀⣻⣷⡾⠟⠉⠛⠀⠀⠀⠈⠏⠙⠻⢷⣾⣇⠀⠀⠀⠈⢻⣦
+⠘⢧⡀⠀⠀⠀⠛⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⣀⣴⡿⠋⠋⠀⠀⠀⢀⡼⠁
+⠀⠘⣧⠀⠀⠀⠀⠀⠀⠛⠿⣧⣤⣤⣤⣤⣿⠿⠛⠀⠀⠀⠀⠀⠀⡿⠃⠀
+⠀⠀⠘⢷⣀⣠⣤⣀⠀⠀⠀⠀⠉⠉⠉⠉⠀⠀⠀⠀⣠⣤⣄⣠⡾⠁⠀⠀
+⠀⠀⠀⠈⠉⠀⠀⠙⠳⠶⣤⣀⣀⣀⣀⣀⣠⡤⠶⠞⠃⠀⠀⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+</pre>
+
+    <div class="sub-header">
+        FOUNDATION SCiPNET v4.2<br>
+        [ SECURE.CONTAIN.PROTECT ]
+    </div>
+
+    <form th:action="@{/login}" method="post">
+        <input type="text" name="username" placeholder="PERSONNEL ID" required autofocus>
+        <input type="password" name="password" placeholder="PASSCODE" required>
+        <button type="submit">INITIALIZE LOGIN</button>
+    </form>
+</div>
+
+</body>
+</html>

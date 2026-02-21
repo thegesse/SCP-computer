@@ -1,0 +1,197 @@
+/* --- 1. GLOBAL TERMINAL DEFAULTS --- */
+html, body {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* --- 2. LOGIN PAGE --- */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+.login-container {
+    text-align: center;
+    border: 2px solid #FFFFFF;
+    padding: 30px;
+    background-color: #000;
+    display: inline-block;
+}
+
+.scp-header-text, .login-container pre {
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    white-space: pre;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    display: block;
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    margin: 10px auto;
+    width: 250px;
+    font-family: inherit;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login-container button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    width: 272px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* --- 3. TERMINAL PAGE STRUCTURE --- */
+.terminal-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-panel {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-right: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.terminal-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#terminal-output {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #FFFFFF;
+}
+
+.input-line {
+    flex-shrink: 0;
+    border-top: 2px solid #FFFFFF;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 1.1rem;
+    width: 100%;
+    outline: none;
+    margin-left: 10px;
+}
+
+/* --- 4. RIGHT PANEL: LOGO & LORE --- */
+.right-panel {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000;
+}
+
+.top-logo {
+    flex: 1;
+    border-bottom: 2px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.top-logo pre {
+    font-size: 6px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+/* --- 5. FIXED AUTO-SCROLL SECTION --- */
+.bottom-lore {
+    flex: 1;
+    position: relative;
+    overflow: hidden; /* Important: clips text outside box */
+    padding: 10px;
+}
+
+.scrolling-content {
+    position: absolute;
+    width: calc(100% - 20px);
+    /* Changed animation to use transform for smooth, non-overlapping loop */
+    animation: scroll-up 40s linear infinite;
+    will-change: transform;
+}
+
+.scrolling-content p {
+    border-left: 2px solid #fff;
+    padding-left: 10px;
+    margin: 20px 0;
+    font-size: 0.85rem;
+}
+
+/* FIX: Using translateY(-100%) ensures the animation
+   clears the FULL height of the text content, preventing
+   it from overlapping on the reset.
+*/
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* --- 6. UI ELEMENTS --- */
+.terminal-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+.terminal-scroll-area::-webkit-scrollbar-track {
+    background: #000;
+}
+.terminal-scroll-area::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+.error-msg {
+    color: #000;
+    background: #fff;
+    padding: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
