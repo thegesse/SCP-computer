@@ -46,3 +46,22 @@
 ## Special thanks
 ### I would like to give a special thanks to [devilishlyney](https://github.com/devilishlyney) for emotional support.
 
+
+
+
+## Note for the team
+### To dos
+- fix bugs when generating files
+- fix censor for clearance access 1 to 3
+- make responsive
+- disable security protocols for clearance level 4 and up
+- ██ council has asked us to put a feature to manage to MTF teams
+- Blacklist Dr.Bright (yes I know its the 100th time but he is still banned from this after the last incident)
+- Someone Teach SCP-073 how to use this, he seemed genuienly interested last time
+- Remove the Leaked api keys
+- Fire whoever made those keys public
+- I have been notified it wasnt a foundation staff that has leaked those, so I trust the higher ups to deal with it appropriately
+- Update the Dr.Bright list of things he isnt supposed to do (we have 50 new additions to the list)
+- Whoever is using the terminal to order Uber Eats please stop
+- Someone has asked for a white mode
+- 
